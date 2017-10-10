@@ -1,0 +1,37 @@
+#master-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+		
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px auto auto 200px;
+	grid-template-areas: 	"header header header"
+							"menu maincontent maincontent"
+							"menu maincontent maincontent"
+							"footer footer footer";
+	}
+			
+	header {
+		grid-area: header;
+		max-width: 100%;
+		
+		background: #ccc;
+	}
+	#menu {
+		grid-area: menu;
+		background-color: blue;
+		max-width: 100%;
+		}
+	div.about {
+		grid-area: footer;
+		background: red;
+		color: white;
+		}
+	#main {
+		grid-area: maincontent;
+		background: pink;
+		}
+
+	footer {
+		grid-area: footer;	
+		}
