@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+@import url('https://fonts.googleapis.com/css?family=Cairo|Londrina+Outline');
 
 body, body * {
-	display: block;
+	
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border box;
 	box-sizing: border box;
 	margin: 0;
 	padding: 0;
+	overflow-y:auto;
 }
 
 
@@ -15,6 +16,7 @@ body, body * {
 #maincontainer {
 	margin:auto;
 	max-width: 1200px;
+	background-color: #d8d8d8;
 }
 
 
@@ -25,22 +27,41 @@ body, body * {
 	text-align: left;
 }
 
+.articleimg {
+	max-width:350px;
+	float: left;
+	margin: 0 10px 10px 0;
+	box-shadow: 5px 8px 5px #888888;
+}
 table {
-	table-layout: fixed;
+	table-layout: static;
 	width: 100%;
  	border-collapse: collapse;
 	border: 1px solid;
+	margin: auto;
+	box-shadow: 5px 8px 5px #888888;
 }
 
+th, td {
+	border: 1px solid;
+	padding: 2px;
+}
 
-aside {
-	float: right;
-	padding-right: 25px;
+th {
+	background-color: #b2b2b2;
+}
+
+article, table, th, td, footer, header, a {
+	font-family: 'Cairo', sans-serif;
 }
 
 article {
 	max-width: 800px;
-	margin: auto;
+	margin: 15px auto;
+	background-color:#ededed;
+	border: solid 1px grey;
+	padding: 25px;
+	box-shadow: 5px 8px 5px #888888;
 }
 
 h1 {
@@ -57,48 +78,43 @@ h2 {
 	font-family: ;
 }
 
-ul {
+.cred {
+	font-size: 0.75rem;
+	float: right;
+}
+ul:not(.sources) {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	background-color: #b2b2b2;
 
-}
 
-ul li {
+}
+ul:not(.sources) li:not(.sources){
 	float: left;
 	font-size: 1.5em;
 
-
 }
-
-li a {
+li:not(.sources) a:not(.sources) {
 	display: block;
 	padding: 20px;
 
 }
-
 a:link {
 	color: black;
 }
-
 a:visited {
-	color:white;
+	color:grey;
 }
-
 a:hover {
 	color:grey;
 }
-
 a:active {
 	color:grey;
 }
 
 footer {
-	position:absolute;
-	right:0;
-	bottom:0;
-	left:0;
+
 	padding: 1rem;
 	background-color: #b2b2b2;
 	text-align:center;
